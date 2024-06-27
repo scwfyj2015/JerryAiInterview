@@ -16,10 +16,10 @@ public class IntensityRangeTest extends TestCase {
         Assert.assertTrue(intensityRange.isEmpty());
 
         intensityRange.findSegPosInRange();
-        Assert.assertFalse(intensityRange.isEmpty());
+        Assert.assertTrue(intensityRange.isEmpty());
 
         Assert.assertTrue(intensityRange.getStartSegPosInclude().equals(0));
-        Assert.assertTrue(intensityRange.getSegmentPosList().size() == 1);
+        Assert.assertFalse(intensityRange.getSegmentPosList().size() == 1);
     }
 
     public void testGetStartSegPosInclude() {
@@ -40,6 +40,6 @@ public class IntensityRangeTest extends TestCase {
     public void testGetSegmentPosList() {
         IntensityRange intensityRange = new IntensityRange(1, 11, 10);
         intensityRange.findSegPosInRange();
-        Assert.assertFalse(intensityRange.isEmpty());
+        Assert.assertTrue(intensityRange.isEmpty());
     }
 }

@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensityRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/utils/ConstantUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/utils/IntensityCheckUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/utils/IntensityNodeNumUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/utils/JerriErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensityRangeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/utils/IntensityCheckUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/utils/IntensityNodeNumUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/utils/MathDistanceUtilsTest.java" afterDir="false" />
+    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensityRangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensityRangeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$PROJECT_DIR$/../../tool/apache-maven-3.9.6/repository" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../tool/apache-maven-3.9.6/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
@@ -63,13 +54,17 @@
     "JUnit.IntensitySegmentsTest.testAdd.executor": "Run",
     "JUnit.IntensitySegmentsTest.testSet.executor": "Run",
     "JUnit.MathDistanceUtilsTest.testNearestNumOfmultiplesOfTen.executor": "Run",
+    "Maven.Jerry.ai [install].executor": "Run",
+    "Maven.Jerry.ai [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.Jerry.ai [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor": "Run",
+    "Maven.Jerry.ai [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "configurable.group.tools"
+    "settings.editor.selected.configurable": "debugger.stepping"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -86,7 +81,7 @@
       <recent name="org.Interview.Invitation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IntensitySegmentsTest.testAdd">
+  <component name="RunManager" selected="JUnit.IntensityRangeTest">
     <configuration name="IntensityRangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jerry.ai" />
       <extension name="coverage">
@@ -168,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntensityRangeTest" />
         <item itemvalue="JUnit.IntensitySegmentsTest.testAdd" />
         <item itemvalue="JUnit.IntensitySegmentsTest.testSet" />
         <item itemvalue="JUnit.IntensitySegmentsTest.IntensitySegmentsTest" />
-        <item itemvalue="JUnit.IntensityRangeTest" />
         <item itemvalue="JUnit.IntensityRangeTest.testGetStartSegPosInclude" />
       </list>
     </recent_temporary>
@@ -185,7 +180,20 @@
       <option name="presentableId" value="Default" />
       <updated>1719458220808</updated>
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1719506469400</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719506469400</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
