@@ -11,10 +11,12 @@ public class IntensityCheckUtils {
 
 
     /**
-     * 区间的有效性校验, to > from ,且最少需要超过一半的步长，才算有效的区间。
+     * 区间的有效性校验, to greate than from ,且最少需要超过一半的步长，才算有效的区间。
      *
      * @param from 区间开始位置
      * @param to   区间结束位置，需要大于from
+     * @param step  步长
+     * @return true 参数校验通过
      */
     public static boolean validCheck(Integer from, Integer to, Integer step) {
 

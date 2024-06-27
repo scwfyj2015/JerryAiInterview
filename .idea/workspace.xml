@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensityRangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensityRangeTest.java" afterDir="false" />
+    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="fix error test">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/utils/IntensityCheckUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/utils/IntensityCheckUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,12 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719506469400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix error test">
+      <option name="closed" value="true" />
+      <created>1719507496424</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719507496424</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="fix error test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
