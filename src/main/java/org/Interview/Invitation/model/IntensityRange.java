@@ -70,4 +70,12 @@ public class IntensityRange {
         this.segmentPosList = values;
     }
 
+    /**
+     * 判断当前范围集涉及的分区是否为空
+     * @return  true: 不涉及有效分区
+     */
+    public boolean isEmpty(){
+        return null == this.segmentPosList||this.segmentPosList.isEmpty();
+    }
+
 }

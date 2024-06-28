@@ -123,22 +123,22 @@ public class IntensitySegmentsTest {
 
         segments.set(20, 90, 1);
         str = segments.toString(); // Should be "[[20,1],[30,0]]"
-        expected = "[[10,-1],[20,1],[30,1],[40,1],[50,1],[60,1],[70,1],[80,1],[90,0]]";
+        expected = "[[10,-1],[20,1],[90,0]]";
         Assert.assertTrue(expected.equals(str));
 
         segments.set(30, 60, 2);
         str = segments.toString(); // Should be "[[20,1],[30,0]]"
-        expected = "[[10,-1],[20,1],[30,2],[40,2],[50,2],[60,1],[70,1],[80,1],[90,0]]";
+        expected = "[[10,-1],[20,1],[30,2],[60,1],[90,0]]";
         Assert.assertTrue(expected.equals(str));
 
         segments.set(60, 90, -1);
         str = segments.toString(); // Should be "[[20,1],[30,0]]"
-        expected = "[[10,-1],[20,1],[30,2],[40,2],[50,2],[60,-1],[70,-1],[80,-1],[90,0]]";
+        expected = "[[10,-1],[20,1],[30,2],[60,-1],[90,0]]";
         Assert.assertTrue(expected.equals(str));
 
         segments.set(70, 90, 0);
         str = segments.toString(); // Should be "[[20,1],[30,0]]"
-        expected = "[[10,-1],[20,1],[30,2],[40,2],[50,2],[60,-1],[70,0]]";
+        expected = "[[10,-1],[20,1],[30,2],[60,-1],[70,0]]";
         Assert.assertTrue(expected.equals(str));
     }
 }
