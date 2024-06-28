@@ -2,17 +2,14 @@
 <project version="4">
   <component name="AnalysisUIOptions">
     <option name="ANALYZE_TEST_SOURCES" value="false" />
-    <option name="SCOPE_TYPE" value="8" />
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="调整add逻辑">
+    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="删除一些冗余操作">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719550783637</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="删除一些冗余操作">
+      <option name="closed" value="true" />
+      <created>1719553173622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719553173622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -235,7 +240,8 @@
     <MESSAGE value="fix error test" />
     <MESSAGE value="add doc" />
     <MESSAGE value="调整add逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整add逻辑" />
+    <MESSAGE value="删除一些冗余操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除一些冗余操作" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
