@@ -4,6 +4,7 @@ package org.Interview.Invitation.model;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -141,4 +142,28 @@ public class IntensitySegmentsTest {
         expected = "[[10,-1],[20,1],[30,2],[60,-1],[70,0]]";
         Assert.assertTrue(expected.equals(str));
     }
+
+
+    @Test
+    public void  removeInvalidSegment(){
+        IntensitySegments segments = new IntensitySegments();
+        Map<Integer, Integer> amountMap = new HashMap<>();
+
+        amountMap.put(10,0);
+        amountMap.put(20,0);
+        amountMap.put(30,0);
+        amountMap.put(40,-1);
+        amountMap.put(50,0);
+        amountMap.put(60,3);
+        amountMap.put(90,0);
+        amountMap.put(120,0);
+
+        segments.setSegmentToAmountMap(amountMap);
+        String stri=segments.toString();
+        System.out.println(stri);
+        String expected = "[[40,-1],[50,0],[60,3],[90,0]]";
+        Assert.assertTrue(stri.equals(expected));
+
+    }
+
 }

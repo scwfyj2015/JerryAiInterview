@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="add doc">
+    <list default="true" id="2b5991c3-4f51-4306-b228-034ba6cac1aa" name="Changes" comment="调整add逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensityRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensityRange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java" afterDir="false" />
     </list>
@@ -58,6 +57,8 @@
     "JUnit.IntensityRangeTest.testGetStartSegPosInclude.executor": "Run",
     "JUnit.IntensityRangeTest.testIsEmpty.executor": "Run",
     "JUnit.IntensitySegmentsTest.IntensitySegmentsTest.executor": "Run",
+    "JUnit.IntensitySegmentsTest.executor": "Run",
+    "JUnit.IntensitySegmentsTest.removeInvalidSegment.executor": "Run",
     "JUnit.IntensitySegmentsTest.testAdd.executor": "Run",
     "JUnit.IntensitySegmentsTest.testSet.executor": "Run",
     "JUnit.MathDistanceUtilsTest.testNearestNumOfmultiplesOfTen.executor": "Run",
@@ -88,7 +89,7 @@
       <recent name="org.Interview.Invitation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IntensitySegmentsTest.testAdd">
+  <component name="RunManager" selected="JUnit.IntensitySegmentsTest.removeInvalidSegment">
     <configuration name="IntensityRangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jerry.ai" />
       <extension name="coverage">
@@ -104,23 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntensityRangeTest.testGetStartSegPosInclude" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Jerry.ai" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.Interview.Invitation.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.Interview.Invitation.model" />
-      <option name="MAIN_CLASS_NAME" value="org.Interview.Invitation.model.IntensityRangeTest" />
-      <option name="METHOD_NAME" value="testGetStartSegPosInclude" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntensitySegmentsTest.IntensitySegmentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntensitySegmentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jerry.ai" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +115,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.Interview.Invitation.model" />
       <option name="MAIN_CLASS_NAME" value="org.Interview.Invitation.model.IntensitySegmentsTest" />
-      <option name="METHOD_NAME" value="IntensitySegmentsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntensitySegmentsTest.removeInvalidSegment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Jerry.ai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.Interview.Invitation.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.Interview.Invitation.model" />
+      <option name="MAIN_CLASS_NAME" value="org.Interview.Invitation.model.IntensitySegmentsTest" />
+      <option name="METHOD_NAME" value="removeInvalidSegment" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IntensitySegmentsTest.testAdd" />
+        <item itemvalue="JUnit.IntensitySegmentsTest.removeInvalidSegment" />
+        <item itemvalue="JUnit.IntensitySegmentsTest" />
         <item itemvalue="JUnit.IntensitySegmentsTest.testSet" />
+        <item itemvalue="JUnit.IntensitySegmentsTest.testAdd" />
         <item itemvalue="JUnit.IntensityRangeTest" />
-        <item itemvalue="JUnit.IntensitySegmentsTest.IntensitySegmentsTest" />
-        <item itemvalue="JUnit.IntensityRangeTest.testGetStartSegPosInclude" />
       </list>
     </recent_temporary>
   </component>
@@ -219,14 +219,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719508276997</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="调整add逻辑">
+      <option name="closed" value="true" />
+      <created>1719550783637</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719550783637</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="fix error test" />
     <MESSAGE value="add doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="add doc" />
+    <MESSAGE value="调整add逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整add逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -278,48 +287,73 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>92</line>
+          <line>93</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>89</line>
+          <line>90</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>87</line>
+          <line>88</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>131</line>
+          <line>132</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>60</line>
+          <line>61</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>68</line>
+          <line>69</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
-          <line>128</line>
+          <line>129</line>
           <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/Interview/Invitation/model/IntensitySegmentsTest.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java</url>
+          <line>381</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java</url>
+          <line>389</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/Interview/Invitation/model/IntensitySegments.java</url>
+          <line>392</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -55,7 +55,7 @@ public class IntensitySegments {
     /**
      * 有效区间的开始位置,存在性是考虑历史曾经处理过的区间的
      */
-    private Integer validStartPos = Integer.MAX_VALUE;
+    private Integer validStartPos = Integer.MIN_VALUE;
     /**
      * 有效区间的结束位置,存在性是考虑历史曾经处理过的区间的
      */
@@ -117,12 +117,6 @@ public class IntensitySegments {
         //处理当前范围集覆盖分区和已有分区相交分区
         updateCross(crossStart, crossEnd, amount);
 
-        //更新最左侧和最右侧的有效区间标识
-        updateValidTerminalPos(intensityRange);
-
-        //删除无效区间，范围集两端的有效区间应该是从非负的得分开始
-        removeInvalidSegment();
-
     }
 
     /**
@@ -155,6 +149,7 @@ public class IntensitySegments {
         }
 
         Integer endPre = 0;
+
         for (int startPos = start; startPos<end; startPos+=step){
             if (this.segmentToAmountMap.containsKey(startPos)){
                 Integer newAmount = amount + this.segmentToAmountMap.get(startPos);
@@ -166,6 +161,7 @@ public class IntensitySegments {
         if (!this.segmentToAmountMap.containsKey(end) && !Objects.equals(preAmount, endPre)){
             this.segmentToAmountMap.put(end, preAmount);
         }
+
     }
 
     /**
@@ -205,6 +201,7 @@ public class IntensitySegments {
             Integer includeStart = intensityRange.getStartSegPosInclude()> this.validEndPos?
                     intensityRange.getStartSegPosInclude() : this.validEndPos;
             this.set(includeStart, intensityRange.endSegPosExclude, amount);
+            this.validEndPos = intensityRange.endSegPosExclude;
             return includeStart;
         }
         return intensityRange.endSegPosExclude;
@@ -221,6 +218,7 @@ public class IntensitySegments {
             Integer excludeEnd = intensityRange.getEndSegPosExclude()< this.validStartPos?
                     intensityRange.getEndSegPosExclude() : this.validStartPos;
             this.set(intensityRange.startSegPosInclude, excludeEnd, amount);
+            this.validStartPos = intensityRange.startSegPosInclude;
             return excludeEnd;
         }
 
@@ -255,8 +253,6 @@ public class IntensitySegments {
      * @param amount 新的分值
      */
     public void set(Integer from, Integer to, Integer amount) { // TODO: implement this
-        //set之前是否有元素
-        boolean isEmptry = this.isEmpty();
 
         //有效性校验
         IntensityCheckUtils.validCheck(from, to, step);
@@ -270,10 +266,6 @@ public class IntensitySegments {
         //根据范围值强制赋值
         forceAssginAmount(amount, intensityRange);
 
-        //删除无效区间，范围集两端的有效区间应该是从非负的得分开始
-        if (!isEmptry) {
-            removeInvalidSegment();
-        }
     }
 
     /**
@@ -385,6 +377,8 @@ public class IntensitySegments {
 
         List<Integer> segPosList = this.segmentToAmountMap.keySet().stream().sorted().collect(Collectors.toList());
 
+        removeInvalidSegment();
+
         StringBuilder stringBuilder = new StringBuilder();
         for (Integer pos : segPosList) {
             if (pos < this.validStartPos) {
@@ -396,7 +390,12 @@ public class IntensitySegments {
             stringBuilder.append(segmentStr(pos, this.segmentToAmountMap.get(pos))).append(",");
         }
 
-        return String.format("[%s]", stringBuilder.substring(0, stringBuilder.length() - 1));
+        if (stringBuilder.length() > 0){
+            return String.format("[%s]", stringBuilder.substring(0, stringBuilder.length() - 1));
+        }else {
+            return ConstantUtils.EMPTY_SERI;
+        }
+
     }
 
 
